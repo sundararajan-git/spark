@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "deploy": "next build && next export"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@react-spring/web": "^10.0.1",
