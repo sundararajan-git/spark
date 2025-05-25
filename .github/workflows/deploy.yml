@@ -7,14 +7,13 @@ on:
 
 jobs:
   build:
-    name: Build & Export
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
@@ -22,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and Export
-        run: npm run deploy
+      - name: Build Next.js static export
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
